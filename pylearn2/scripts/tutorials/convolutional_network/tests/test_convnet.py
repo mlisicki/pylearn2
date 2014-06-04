@@ -38,8 +38,10 @@ def test_convolutional_network():
     train = yaml_parse.load(yaml)
     train.main_loop()
 
-    try:
-        os.remove("{}/convolutional_network_best.pkl".format(save_path))
-    except:
-        pass
+    #try:
+    #    os.remove("{}/convolutional_network_best.pkl".format(save_path))
+    #except:
+    #    pass
+if __name__=="__main__":
+    test_convolutional_network()
 

@@ -28,10 +28,10 @@ def test_part_2():
               'mlp_tutorial_part_2.yaml'), 'r') as f:
         train = f.read()
     f.close()
-    hyper_params = {'train_stop': 50,
-                    'valid_stop': 50050,
-                    'dim_h0': 5,
-                    'max_epochs': 1,
+    hyper_params = {'train_stop': 50000,
+                    'valid_stop': 60000,
+                    'dim_h0': 500,
+                    'max_epochs': 10000,
                     'save_path': SAVE_PATH}
     train = train % (hyper_params)
     train = yaml_parse.load(train)
@@ -75,3 +75,6 @@ def test_part_4():
     train_3 = yaml_parse.load(train_3)
     train_3.main_loop()
     cleaunup("mlp_3_best.pkl")
+
+if __name__=="__main__":
+    test_part_2()
