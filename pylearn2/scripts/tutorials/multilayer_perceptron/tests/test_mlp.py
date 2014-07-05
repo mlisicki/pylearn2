@@ -39,12 +39,13 @@ def test_part_2():
     cleaunup("mlp_best.pkl")
 
 
+
+
 def test_part_3():
     skip_if_no_data()
     with open(os.path.join(YAML_FILE_PATH,
               'mlp_tutorial_part_3.yaml'), 'r') as f:
         train_2 = f.read()
-    f.close()
     hyper_params = {'train_stop': 50,
                     'valid_stop': 50050,
                     'dim_h0': 5,
@@ -63,7 +64,6 @@ def test_part_4():
     with open(os.path.join(YAML_FILE_PATH,
               'mlp_tutorial_part_4.yaml'), 'r') as f:
         train_3 = f.read()
-    f.close()
     hyper_params = {'train_stop': 50,
                     'valid_stop': 50050,
                     'dim_h0': 5,
